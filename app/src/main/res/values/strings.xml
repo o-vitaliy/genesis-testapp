@@ -3,7 +3,7 @@
     <string name="search">Search</string>
     <string name="history">History</string>
     <string name="history_is_empty">History is empty</string>
-    <string name="login">Login</string>
+    <string name="login">Login with GitHub</string>
 
     <string name="error.no_internet_connection">No internet connection</string>
     <string name="error.something_wrong">Something wrong</string>

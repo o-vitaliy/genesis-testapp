@@ -17,6 +17,7 @@ class LoginViewModel(
 
     val open: LiveData<String> = MutableLiveData()
     val authorized = LiveEvent<Unit>()
+    val loading:LiveData<Boolean> = MutableLiveData(false)
 
     fun loginClicked() {
         val clientId = resourceProvider.getString(R.string.github_client_id)
@@ -25,15 +26,17 @@ class LoginViewModel(
 
     fun codeReceived(url: String?) {
         val code = LinkHelper.getParam(url, CODE) ?: return
-
+        loading.postValue(true)
         loginUseCase(
             LoginUseCase.Params(code = code)
         ) {
             it.doOnSuccess {
+                loading.postValue(false)
                 authorized.postValue(Unit)
             }
             it.doOnError { t ->
                 t.traceError()
+                loading.postValue(false)
             }
         }
     }

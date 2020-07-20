@@ -12,6 +12,7 @@ import com.genesis.testapp.presentation.common.OnNewIntentListener
 import com.genesis.testapp.presentation.common.observe
 import com.genesis.testapp.presentation.common.openLink
 import com.genesis.testapp.presentation.common.showSnackBar
+import com.genesis.testapp.presentation.common.visible
 import com.genesis.testapp.presentation.viewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 import org.kodein.di.Kodein
@@ -38,6 +39,11 @@ class LoginFragment : Fragment(), KodeinAware, OnNewIntentListener {
         observe(viewModel.open, ::openLink)
         observe(viewModel.authorized, ::loggedIn)
         observe(viewModel.error, ::showError)
+        observe(viewModel.loading, ::updateLoading)
+    }
+
+    private fun updateLoading(loading: Boolean) {
+        loginLoading.visible(loading)
     }
 
     private fun showError(error: String) {
