@@ -1,0 +1,5 @@
+<resources>
+    <string name="github_client_id" translatable="false">f486a61d99448b3a26e2</string>
+    <string name="github_client_secret" translatable="false">a08ffcf8c9f68edc2376999621d2cddbbce3b198</string>
+    <string name="github_auth_link">https://github.com/login/oauth/authorize?client_id=%s</string>
+</resources>
