@@ -63,6 +63,11 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$archLifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$archLifecycleVersion"
 
+    // room
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+
     //fragments
     implementation "androidx.fragment:fragment:$fragmentVersion"
     implementation "androidx.fragment:fragment-ktx:$fragmentVersion"
@@ -80,6 +85,10 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+
+    // groupie
+    implementation "com.xwray:groupie:$groupieVersion"
+    implementation "com.xwray:groupie-kotlin-android-extensions:$groupieVersion"
 
     // logger
     implementation "com.jakewharton.timber:timber:$timberVersion"

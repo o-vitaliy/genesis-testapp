@@ -1,4 +1,4 @@
-package com.genesis.testapp.data.api
+package com.genesis.testapp.data.network
 
 import okhttp3.Interceptor
 import okhttp3.Response

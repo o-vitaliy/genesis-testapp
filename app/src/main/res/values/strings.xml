@@ -7,4 +7,7 @@
 
     <string name="error.no_internet_connection">No internet connection</string>
     <string name="error.something_wrong">Something wrong</string>
+    <string name="start">%d Start</string>
+    <string name="language">Language: %s</string>
+    <string name="nothing_found">Nothing Found</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.genesis.testapp.data.api
+package com.genesis.testapp.data.network
 
 import com.genesis.testapp.data.auth.sources.TokenDataSource
 import okhttp3.Interceptor
