@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GenesisTestApp</string>
+    <string name="search">Search</string>
+    <string name="history">History</string>
+    <string name="history_is_empty">History is empty</string>
+    <string name="login">Login</string>
 </resources>
