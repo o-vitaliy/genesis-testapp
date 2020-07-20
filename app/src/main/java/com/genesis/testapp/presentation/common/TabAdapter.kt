@@ -2,7 +2,7 @@ package com.genesis.testapp.presentation.common
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import java.util.*
+import java.util.ArrayList
 
 class TabAdapter(
     fragment: Fragment
@@ -18,7 +18,6 @@ class TabAdapter(
     fun getPageTitle(position: Int): CharSequence? {
         return titles[position]
     }
-
 
     override fun getItemCount(): Int = fragmentsClasses.size
 

@@ -9,5 +9,4 @@ class SearchReposRemoteDataSource(
         val result = reposApi.searchRepos(query, offset, limit)
         return result.items
     }
-
 }

@@ -14,7 +14,6 @@ import java.net.UnknownHostException
 abstract class BaseViewModel(private val resourceProvider: ResourceProvider) : ViewModel() {
     val error: LiveData<String> = MutableLiveData()
 
-
     fun Throwable.traceError() {
         val message = when (this) {
             is IOException, is UnknownHostException -> resourceProvider.getString(R.string.error_no_internet_connection)

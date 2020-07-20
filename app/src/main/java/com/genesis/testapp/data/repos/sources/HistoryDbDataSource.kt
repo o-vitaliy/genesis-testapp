@@ -14,5 +14,4 @@ class HistoryDbDataSource(
     override suspend fun saveHistory(repo: RepoDbEntity) {
         repoDao.insert(repo)
     }
-
 }

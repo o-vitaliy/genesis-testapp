@@ -5,7 +5,11 @@ import com.genesis.testapp.data.repos.sources.ReposApi
 import com.google.gson.Gson
 import okhttp3.Interceptor
 import org.kodein.di.Kodein
-import org.kodein.di.generic.*
+import org.kodein.di.generic.bind
+import org.kodein.di.generic.inSet
+import org.kodein.di.generic.instance
+import org.kodein.di.generic.setBinding
+import org.kodein.di.generic.singleton
 import retrofit2.Retrofit
 
 val apiModule = Kodein.Module("api") {

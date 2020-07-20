@@ -23,6 +23,5 @@ class MainActivity : AppCompatActivity(), KodeinAware {
                 .mapNotNull { it as? OnNewIntentListener }
                 .forEach { it.onNewIntent(i) }
         }
-
     }
 }

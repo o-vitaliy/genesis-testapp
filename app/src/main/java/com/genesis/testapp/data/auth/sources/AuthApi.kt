@@ -14,5 +14,4 @@ interface AuthApi {
         @Query("client_secret") clientSecret: String,
         @Query("code") code: String
     ): TokenResponse
-
 }

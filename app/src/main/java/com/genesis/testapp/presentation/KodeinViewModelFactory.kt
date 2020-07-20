@@ -19,4 +19,3 @@ inline fun <reified VM : ViewModel, T> T.viewModel(): Lazy<VM> where T : KodeinA
         ViewModelProvider(this, direct.instance()).get(VM::class.java)
     }
 }
-

@@ -62,5 +62,4 @@ val dataModule = Kodein.Module("data") {
     bind<HistoryDataSource>() with singleton {
         HistoryDbDataSource(instance())
     }
-
 }

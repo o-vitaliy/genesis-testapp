@@ -2,8 +2,6 @@ package com.genesis.testapp.data.auth.sources
 
 import com.genesis.testapp.R
 import com.genesis.testapp.data.ResourceProvider
-import com.genesis.testapp.data.auth.sources.AuthApi
-import com.genesis.testapp.data.auth.sources.AuthDataSource
 
 class AuthRemoteDataSource(
     private val api: AuthApi,
@@ -17,5 +15,4 @@ class AuthRemoteDataSource(
         ).token
         return checkNotNull(token)
     }
-
 }

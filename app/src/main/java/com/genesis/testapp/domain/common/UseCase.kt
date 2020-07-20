@@ -1,6 +1,10 @@
 package com.genesis.testapp.domain.common
 
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlin.coroutines.CoroutineContext
 
 abstract class UseCase<out Type, in Params> : CoroutineScope where Type : Any {
@@ -13,6 +17,7 @@ abstract class UseCase<out Type, in Params> : CoroutineScope where Type : Any {
 
     abstract suspend fun run(params: Params): Type
 
+    @SuppressWarnings("TooGenericExceptionCaught")
     operator fun invoke(params: Params, onResult: (Result<Type>) -> Unit = {}) =
         launch {
             val result = try {

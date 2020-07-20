@@ -36,5 +36,4 @@ class SplashFragment : Fragment(), KodeinAware {
             findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
         }
     }
-
 }
